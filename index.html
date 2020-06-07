@@ -3,23 +3,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leap Year Finder</title>
+    <link rel="stylesheet" href=css/bootstrap.css>
+    <link rel="stylesheet" href=css/styles.css>
 </head>
 <body>
-    <div>
-        <div class="overlay"></div>
-        <div class="container"></div>
-        <div class="jumbotron">
-            <h1 class="display-4">Leap Year Calculator</h1>
-            <p class="lead">This is a simple calculator that can be used to identify <strong>Leap years</strong></p>
-          </div>
-        <form name="myForm" class="form" onsubmit="Find">
-            <div class="form">
-                <label for="year:"></label>
-                <input type="number" class="leap" id="year" placeholder="enter year" >
-            </div>
-            <button type="submit" class="btn btn-primary" onclick="Find">Submit</button>
-        </form>
-
+    <div class="jumbotron">
+        <h1 class="display-4">Leap Year Calculator</h1>
+        <p class="lead">This is a simple calculator that can be used to identify <strong>Leap years</strong></p>
     </div>
+    <div class="overlay">
+        <div class="container">
+            
+            <form name="myForm" class="form" onsubmit="findLeapYear();">
+                <div class="form">
+                    <label for="year:"></label>
+                    <input type="number" class="leap" id="year" placeholder="enter year" >
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="findLeapYear();">Submit</button>
+            </form>
+            <p id="results"> </p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
+
